@@ -1,0 +1,32 @@
+﻿<Window x:Class="sussybakka.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sussybakka"
+        mc:Ignorable="d" Height="400" Width="263" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="Height" WindowStyle="None">
+    <Grid Background="#FF085D80" Margin="0,0,-2,1" RenderTransformOrigin="0.5,0.5" Height="400">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="32"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="Username" HorizontalAlignment="Left" Height="18" Margin="30,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Grid.ColumnSpan="3" Grid.Column="2" RenderTransformOrigin="0.504,0.35"/>
+        <Label Content="Sign Up" HorizontalAlignment="Left" Height="31" Margin="18,69,0,0" VerticalAlignment="Top" Width="104" FontFamily="Bahnschrift Light" FontSize="18" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button Content="Sign Up" HorizontalAlignment="Left" Height="24" Margin="29,228,0,0" VerticalAlignment="Top" Width="156" Background="#FF065678" BorderBrush="#FF1B5EA0" Grid.Column="2" FontFamily="Bahnschrift Light" ClickMode="Press" Foreground="#FF131415" Grid.ColumnSpan="3" Click="SignUpButton_Click" FontSize="10"/>
+        <Image Grid.ColumnSpan="4" Grid.Column="3" HorizontalAlignment="Left" Height="78" Margin="24,47,0,0" VerticalAlignment="Top" Width="74" Source="Untitled-1.png" Opacity="0.7" Stretch="UniformToFill">
+            <Image.Effect>
+                <DropShadowEffect RenderingBias="Quality"/>
+            </Image.Effect>
+        </Image>
+        <PasswordBox x:Name="Password" Grid.ColumnSpan="3" Grid.Column="2" HorizontalAlignment="Left" Height="18" Margin="31,194,0,0" VerticalAlignment="Top" Width="155"/>
+        <Button Content="Login" HorizontalAlignment="Left" Height="24" Margin="86,268,0,0" VerticalAlignment="Top" Width="49" Click="LoginButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="2" FontSize="8" Grid.ColumnSpan="2"/>
+        <Button x:Name="SU_CloseButton" Content="X" Grid.Column="6" HorizontalAlignment="Left" Height="20" Margin="2,7,0,0" VerticalAlignment="Top" Width="20" Click="CloseButton_Click"/>
+        <Button x:Name="SU_MinimiseButton" Content="_" Grid.Column="5" HorizontalAlignment="Left" Height="20" Margin="5,7,0,0" VerticalAlignment="Top" Width="20" Click="MinimiseButton_Click"/>
+
+    </Grid>
+</Window>
