@@ -68,13 +68,56 @@ namespace sussybakka
             Window1 window1 = new Window1();
             window1.Show();
             this.Close();
+
         }
 
         private void UserName_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
+
+        private void SignInButton_Click(object sender, RoutedEventArgs e)
+        {
+            //open connection to sql server
+            //check if data already exists
+            try
+            {
+                using (SqlConnection con = new SqlConnection(@"Server=DESKTOP-31579CJ\SQLEXPRESS;Database=LoginInformation;Trusted_connection = True;"))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT Username,Pass FROM [Users] WHERE Username = @UserName AND Pass = @Password", con))
+                    {
+                        SqlParameterCollection parameters1 = cmd.Parameters;
+                        cmd.Parameters.AddWithValue("@UserName", Username.Text);
+                        cmd.Parameters.AddWithValue("@Password", Password.Password);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                
+                                Loading Loading1 = new Loading();
+                                Loading1.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect username or password");
+                            }
+                        }
+                    }
+                    
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 
-
 }
+    
+
+
+

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -59,7 +60,7 @@ namespace sussybakka
                 using (SqlConnection con = new SqlConnection(@"Server=DESKTOP-31579CJ\SQLEXPRESS;Database=LoginInformation;Trusted_connection = True;"))
                 { 
 
-                    SqlCommand cmd = new SqlCommand(@"SELECT Username FROM [User] WHERE Username = '" + Username.Text + "'", con);
+                    SqlCommand cmd = new SqlCommand(@"SELECT Username FROM [Users] WHERE Username = '" + Username.Text + "'", con);
                     con.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
@@ -70,11 +71,15 @@ namespace sussybakka
                     {
                         dr.Close();
                         MessageBox.Show("Account created");
-                        cmd = new SqlCommand(@"INSERT INTO [User] (Username,Password,UserID) VALUES (@Username,@Password,@UserID)", con);
-                        cmd.ExecuteNonQuery();
+                        cmd = new SqlCommand(@"INSERT INTO [Users] (Username,Pass) VALUES (@Username,@Password)", con);
+                        SqlParameterCollection parameters = cmd.Parameters;
+                        
+                        parameters.AddWithValue("@Username", Username.Text);
+                        parameters.AddWithValue("@Password",Password.Password);
                         
 
-                    //clear textboxes
+                        cmd.ExecuteNonQuery();
+                        //clear textboxes
                         Username.Text = "";
                         Password.Password = "";
                     }
@@ -87,9 +92,7 @@ namespace sussybakka
             catch (Exception ex)
             {
                 MessageBox.Show("Exception occured" + ": " + ex.Message);
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-31579CJ\SQLEXPRESS;Initial Catalog=LoginInformation;Integrated Security=True;User ID = yes; Password = yes");
-                //create table if one does not exist
-                SqlCommand cmd = new SqlCommand("CREATE TABLE User (Username varchar(50), Password varchar(50))", con);
+               
                 
            
 
