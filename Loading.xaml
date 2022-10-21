@@ -9,23 +9,30 @@
     <Grid Background="#FF085D80">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="58*"/>
-            <ColumnDefinition Width="380*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="328*"/>
             <ColumnDefinition Width="184*"/>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="7*"/>
             <ColumnDefinition Width="33*"/>
-            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="118"/>
         </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Left" Height="243" Margin="231,81,0,0" VerticalAlignment="Top" Width="247" Source="/Images/Untitled-1.png" Opacity="0.4" Grid.Column="1" Grid.ColumnSpan="2">
+        <Image HorizontalAlignment="Left" Height="243" Margin="179,81,0,0" VerticalAlignment="Top" Width="247" Source="/Images/Untitled-1.png" Opacity="0.4" Grid.Column="2" Grid.ColumnSpan="2">
             <Image.Effect>
                 <BlurEffect/>
             </Image.Effect>
         </Image>
-        <Label Content="Loading..." HorizontalAlignment="Left" Height="43" Margin="304,324,0,0" VerticalAlignment="Top" Width="102" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2">
+        <Label Content="Loading..." HorizontalAlignment="Left" Height="43" Margin="252,324,0,0" VerticalAlignment="Top" Width="102" FontSize="20" Grid.Column="2" Grid.ColumnSpan="2">
             <Label.Effect>
                 <BlurEffect/>
             </Label.Effect>
         </Label>
+        <Frame x:Name="Main" Grid.ColumnSpan="8" HorizontalAlignment="Left" Height="409" Margin="-4,37,0,4" VerticalAlignment="Center" Width="803" NavigationUIVisibility="Hidden"/>
+        <Button x:Name="SU_CloseButton" Content="X" Grid.Column="7" HorizontalAlignment="Left" Height="20" Margin="89,8,0,0" VerticalAlignment="Top" Width="20" Click="CloseButton_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Margin="56,4,0,0" VerticalAlignment="Top" Width="58" Fill="#FF085D80" Grid.Column="7" Stroke="#FF085778" RadiusX="5" RadiusY="5"/>
+        <Button x:Name="SU_MinimiseButton" Content="_" Grid.Column="7" HorizontalAlignment="Left" Height="21" Margin="63,8,0,0" VerticalAlignment="Top" Width="21" Click="MinimiseButton_Click" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Button x:Name="SU_CloseButton_Copy" Content="x" Grid.Column="7" HorizontalAlignment="Left" Height="25" Margin="85,8,0,0" VerticalAlignment="Top" Width="25" Click="CloseButton_Click" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Label Content="DPCS" HorizontalAlignment="Left" Height="30" Margin="5,3,0,0" VerticalAlignment="Top" Width="46" FontWeight="Bold" Background="{x:Null}" Foreground="#FF021F2B" FontStyle="Italic"/>
 
     </Grid>
 </Window>

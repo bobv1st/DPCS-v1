@@ -93,9 +93,6 @@ namespace sussybakka
             {
                 MessageBox.Show("Exception occured" + ": " + ex.Message);
                
-                
-           
-
 
             }
 

@@ -20,6 +20,9 @@
         <Button Content="Sign Up" HorizontalAlignment="Left" Height="24" Margin="29,228,0,0" VerticalAlignment="Top" Width="156" Background="#FF065678" BorderBrush="#FF1B5EA0" Grid.Column="2" FontFamily="Bahnschrift Light" ClickMode="Press" Foreground="#FF131415" Grid.ColumnSpan="3" Click="SignUpButton_Click" FontSize="10"/>
         <PasswordBox x:Name="Password" Grid.ColumnSpan="3" Grid.Column="2" HorizontalAlignment="Left" Height="18" Margin="31,194,0,0" VerticalAlignment="Top" Width="155"/>
         <Button Content="Login" HorizontalAlignment="Left" Height="24" Margin="86,268,0,0" VerticalAlignment="Top" Width="49" Click="LoginButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="2" FontSize="8" Grid.ColumnSpan="2"/>
+        <Label Content="Username" HorizontalAlignment="Left" Height="23" Margin="26,134,0,0" VerticalAlignment="Top" Width="106" FontFamily="Bahnschrift Light" FontSize="14" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="23" Margin="28,173,0,0" VerticalAlignment="Top" Width="106" FontFamily="Bahnschrift Light" FontSize="14" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Rectangle Grid.ColumnSpan="7" Fill="#FF0C5A7A" HorizontalAlignment="Left" Height="30" Margin="-1,1,0,0" VerticalAlignment="Top" Width="266"/>
         <Button x:Name="SU_CloseButton" Content="X" Grid.Column="6" HorizontalAlignment="Left" Height="20" Margin="2,7,0,0" VerticalAlignment="Top" Width="20" Click="CloseButton_Click"/>
         <Button x:Name="SU_MinimiseButton" Content="_" Grid.Column="5" HorizontalAlignment="Left" Height="20" Margin="5,7,0,0" VerticalAlignment="Top" Width="20" Click="MinimiseButton_Click"/>
 

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,30 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace sussybakka
 {
     /// <summary>
-    /// Interaction logic for Loading.xaml
+    /// Interaction logic for ChatApp_Page.xaml
     /// </summary>
-    public partial class Loading : Window
+    public partial class ChatApp_Page : Page
     {
-        public Loading()
+        public ChatApp_Page()
         {
             InitializeComponent();
-            
-            Main.Content = new Loading_Page();
-        }
-
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void MinimiseButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
